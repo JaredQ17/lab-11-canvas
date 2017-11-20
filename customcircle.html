@@ -1,0 +1,46 @@
+<html>
+<body>
+	<title></title>
+</head>
+<body onload = "draw()">
+<canvas id = "sketch" width = "300" height = "300">
+</canvas>
+
+<script>
+var radius = prompt("Enter the radius of the circle.");
+var color = prompt("Enter the color of the circle. Chooose red, green, or blue.");
+
+function draw() {
+	if (color === "red") {
+		var context = sketch.getContext("2d");
+		context.fillStyle = "#ff0000"
+		context.beginPath();
+		context.arc(150, 150, radius, 0, 2 * Math.PI, true);
+		context.closePath();
+		context.fill();
+	}
+	if (color === "blue") {
+		var context = sketch.getContext("2d");
+		context.fillStyle = "#0000ff"
+		context.beginPath();
+		context.arc(150, 150, radius, 0, 2 * Math.PI, true);
+		context.closePath();
+		context.fill();
+	} 
+	if (color === "green") {
+		var context = sketch.getContext("2d");
+		context.fillStyle = "#00ff00"
+		context.beginPath();
+		context.arc(150, 150, radius, 0, 2 * Math.PI, true);
+		context.closePath();
+		context.fill();
+	}
+	else {
+		console.log("That's not a valid color. Refresh the page and try again.")
+	}
+
+}
+
+</script>
+</body>
+</html>
